@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello, world!</title>
+		<script src="filter.js"></script>
+		<!-- <script src="test.js"></script> -->
+		<link rel="stylesheet" href="main.css" type="text/css" media="all">
+    </head>
+    <body >
+
+		<h1>Enzo duret groupe 12</h1>
+
+	<div>
+		 <!-- <a href="#"  onMouseOver="javascript:document.img01.src='Beelzebub.png'"> -->
+
+		<!-- <img name="img01" id="photo" src="pixel.png" width='600' height='400'></a> -->
+
+		<img id="photo" name="img01" src='img/cat.png'  min-width='600' min-height='400' /> 
+ 			<!-- <img 	 alt="Pas d'image chargée !"> -->
+		<canvas id="mycanvas"></canvas>
+
+	</div>
+
+	<div>
+		<button onclick="negatife();">Filtre negatif</button>
+		<p>
+			On soustraire chaque couleurs a 255 (la couleur max) se qui donne le negatif de l image.  
+		</p>
+		<button onclick="funky();">Filtre negatif/funky</button>
+		<p>
+			On soustraire chaque couleurs a 255 (la couleur max) se qui donne le negatif de l image.  
+		</p>
+		<p>vert</p>
+		<br>
+		<button onclick="gris();">Filtre nuance de gris</button>
+		<p>
+			On prends la moyenne des 3 couleurs et on l applique a chaque couleurs se qui passe l image en nuance de gris.
+		</p>
+		<p>vert</p>
+		<br>
+		<button onclick="rouge();">Filtre uniquement rouge</button>
+		<p>
+			Un filtre en nuance de gris sauf, pour la couleurs rouge d une image qui elle reste inchanger, avec une marge.
+		</p>
+		<p>noir</p>
+		<br>
+		<button onclick="trigger();">Filtre trigger</button>
+		<p>
+			On accentu, les couleur au dessus de 128, et les autres on les passe en noir.
+		</p>
+		<p>noir?</p>
+		<br>
+		<button onclick="unpeudetout();">un peu de tout</button>
+		<p>J'ai mixé tout les filtres de base, en haut a gauche il y a 1 pixel sur 2 verticalment qui est vert. En bas a gauche, il y a 1 pixel sur 2 horizontalment qui est rouge.
+			<br> En haut a droite il y a un filtre rouge transparent. En bas a droite il y a un filtre bleu</p>
+			<p>vert*4</p>
+			<br>
+		<button onclick="rougespe();">Un rouge spécial</button>
+		<p>	On calcule la moyenne des couleur pour etre en nuance de gris
+			En fonction de cette moyenne on class les pixel en 3 : <br>
+			0 < noir< 85< blueelectrique< 170< blanc< 255
+			Puis on les transforme en une des 3 couleur en fonction
+			ensuite on applique un filtre inversé, pour que le bleu devienne rouge</p>
+			<p>noir</p>
+			<br>
+		<button onclick="flou();">Filtre flou</button>
+
+		<p> On prends la somme d'un pixel et de tout les pixel qui l entoure (donc 9 en tous)
+			Puis on le divise par leurs nombre pour obtenir une moyenne qu'on applique au pixel central
+			Se qui crée un flou</p>
+			<p>orange</p>
+		<br>
+		<button onclick="bug();">Filtre Buggé</button>
+		<p>	Pour chaque couleur, on prends la couleur décalé de quelque pixel puis on 
+			la deplace de se meme nombre de pixel
+			effet non voulut : l image se décale</p>
+			<p>orange</p>
+		<br>
+		<button onclick="dégradé();">Filtre dégradé</button>
+		<p>	On rajoute un axe (l'x pour le rouge et l'y pour le vert)
+			Cela va décallé les couleurs proportionnelment est crée un dégradé</p>
+			<p>orange</p>
+			<br>
+		<button onclick="javascript:document.img01.src='img/cat.png">Reset de l'image</button>
+		<p>Un bouton qui permet de recharger l'image et donc d'enlever tout les filtre appliqué (j'ai mis 4heure pour faire ca)</p>
+		<p>rouge</p>
+	</div>
+	</body>
+</html>
